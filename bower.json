@@ -1,0 +1,14 @@
+{
+  "name": "sparkl",
+  "version": "0.0.1",
+  "main": "build/sparkl.js",
+  "license": "",
+  "ignore": [
+    "build/debug",
+    "test",
+    "src",
+    "*.md",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
