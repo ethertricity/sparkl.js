@@ -1,8 +1,12 @@
 {
   "name": "sparkl",
   "version": "0.0.1",
-  "main": "build/sparkl.js",
+  "main": "build/release/sparkl.js",
   "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethertricity/sparkl.js.git"
+  },
   "ignore": [
     "build/debug",
     "test",
