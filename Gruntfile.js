@@ -75,6 +75,7 @@ module.exports = function (grunt) {
           , 'concat'
           , 'copy:core'
           , 'replace:debug'
+          , 'clean'
         ],
         options: {
           spawn: true
@@ -83,7 +84,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build-release', []);
+  grunt.registerTask('release', []);
 
   grunt.registerTask('build-debug', [
     'clean'
@@ -94,7 +95,7 @@ module.exports = function (grunt) {
     , 'clean'
   ]);
 
-  grunt.registerTask('dev-debug', [
+  grunt.registerTask('debug', [
     'watch:debug'
   ]);
 
