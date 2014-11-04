@@ -2,10 +2,7 @@ Sparkl.js
 
 ::INSTALATION
 
-```
-npm install
-
-```
+`npm install`
 
 ::DEVELOPMENT
 
