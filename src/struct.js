@@ -173,7 +173,7 @@ Struct.prototype.contentWithTagAndNames = function (tag, namesOrIds) {
     content.every(function (item) {
       if (item.tag && item.tag === tag) {
         if (namesOrIds.indexOf(item.attr.id) >= 0 || namesOrIds.indexOf(
-          item.attr.name) >= 0) {
+            item.attr.name) >= 0) {
           result.push(new Struct(item));
         }
       }

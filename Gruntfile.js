@@ -56,6 +56,27 @@ module.exports = function (grunt) {
             dest: 'build/debug/'
           }
         ]
+      },
+
+      release: {
+        options: {
+          prefix: '//@@',
+          patterns: [
+            {
+              match: 'includes',
+              replacement: '<%= grunt.file.read(".tmp/source.js") %>'
+            }
+          ]
+        },
+
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['.tmp/sparkl.js'],
+            dest: 'build/release/'
+          }
+        ]
       }
     },
 
@@ -63,6 +84,11 @@ module.exports = function (grunt) {
       debug: {
         files: {
           "build/debug/sparkl.min.js": ['build/debug/sparkl.js']
+        }
+      },
+      release: {
+        files: {
+          "build/release/sparkl.min.js": ['build/release/sparkl.js']
         }
       }
     },
@@ -91,14 +117,21 @@ module.exports = function (grunt) {
     , 'concat'
     , 'copy:core'
     , 'replace:debug'
-    , 'uglify'
+    , 'uglify:debug'
+    , 'clean'
+  ]);
+
+  grunt.registerTask('build-release', [
+    'clean'
+    , 'concat'
+    , 'copy:core'
+    , 'replace:release'
+    , 'uglify:release'
     , 'clean'
   ]);
 
   grunt.registerTask('debug', [
     'watch:debug'
   ]);
-
-
-  grunt.registerTask('test', []);
+  
 };

@@ -47,7 +47,7 @@ EventHandler.prototype.on = function (eventType, callback) {
     });
   } else {
     console.log("Supported event types: " +
-      eventHandler.eventTypes.join(","));
+    eventHandler.eventTypes.join(","));
   }
   return eventHandler.source;
 };
