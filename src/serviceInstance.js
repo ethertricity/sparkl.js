@@ -158,9 +158,9 @@ ServiceInstance.prototype.loadBrowserJavascript = function () {
       }
 
       console.log(
-          "Loading implementation for "
+        "Loading implementation for "
 
-          + service.id() + " from '" + url + "'");
+        + service.id() + " from '" + url + "'");
 
       script.setAttribute("type", "text/javascript");
       script.setAttribute("src", url);
@@ -186,7 +186,7 @@ ServiceInstance.prototype.loadBrowserJavascript = function () {
       document.getElementsByTagName("head")[0].appendChild(script);
     } else {
       console.warn(service.id() +
-          ": No implementation, awaiting open events on dependent services"
+        ": No implementation, awaiting open events on dependent services"
       );
       fulfil();
     }
@@ -262,8 +262,8 @@ ServiceInstance.prototype.onAggregate = function (aggregateEvent) {
   var serviceInstance = this;
 
   console.log("Aggregate event from: " +
-    aggregateEvent.aggregatorInstanceId() + " (" +
-    aggregateEvent.content()[0].name() + ")");
+  aggregateEvent.aggregatorInstanceId() + " (" +
+  aggregateEvent.content()[0].name() + ")");
   serviceInstance.aggregateEvents.push(aggregateEvent);
 };
 
