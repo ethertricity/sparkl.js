@@ -116,8 +116,18 @@
    * logs error and returns false.
    */
   if (typeof WebSocket === "undefined") {
-    console.error("This browser does not support WebSocket");
-    return;
+    if (executionEnvironment() === EE_NODEJS) {
+      WebSockets = require("ws");
+    } else {
+      console.error("This browser does not support WebSocket");
+      return;
+    }
+  }
+
+  if (typeof Promise === "undefined") {
+    if (executionEnvironment() === EE_NODEJS) {
+      Promise = require("promise");
+    }
   }
 
   /**
