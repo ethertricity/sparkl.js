@@ -100,17 +100,7 @@
       }
     };
   };
-
-  /*
-   var counter = function() {
-   var count = 0;
-
-   return function() {
-   return count < 4294967295 ? count++ : 0;
-   };
-   };
-   */
-
+  
   /**
    * Returns true if browser has required functionality, otherwise
    * logs error and returns false.

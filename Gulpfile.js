@@ -16,5 +16,5 @@ gulp.task("release", function() {
   gulp.src('src/core.js')
     .pipe(include())
     .pipe(rename("sparkl.js"))
-    .pipe(gulp.dest("build/debug"))
+    .pipe(gulp.dest("build/release"))
 });
