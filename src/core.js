@@ -102,21 +102,21 @@
   };
 
   /**
+   * Requires libraries used by node.js version
+   */
+  if (executionEnvironment() === EE_NODEJS) {
+    WebSocket = require("ws");
+    Promise = require("promise");
+  }
+
+  /**
    * Returns true if browser has required functionality, otherwise
    * logs error and returns false.
    */
   if (typeof WebSocket === "undefined") {
-    if (executionEnvironment() === EE_NODEJS) {
-      WebSockets = require("ws");
-    } else {
+    if (executionEnvironment() === EE_BROWSER) {
       console.error("This browser does not support WebSocket");
       return;
-    }
-  }
-
-  if (typeof Promise === "undefined") {
-    if (executionEnvironment() === EE_NODEJS) {
-      Promise = require("promise");
     }
   }
 

@@ -2,7 +2,7 @@
   "name": "sparkl",
   "title": "Sparkl",
   "description": "Sparkl Javascript Library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "build/release/sparkl.js",
   "homepage": "http://sparkl.com",
   "author": {
