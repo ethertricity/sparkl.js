@@ -152,7 +152,9 @@
     }
   };
 
-//@@includes
+  //
+  //= include ['*', '!core.js']
+  //
 
   /**
    * The SPARKL object.
