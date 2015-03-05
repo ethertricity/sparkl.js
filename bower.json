@@ -1,6 +1,6 @@
 {
   "name": "sparkl",
-  "version": "1.0.01",
+  "version": "1.0.2",
   "main": "build/release/sparkl.js",
   "license": "",
   "repository": {

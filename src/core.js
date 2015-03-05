@@ -100,7 +100,7 @@
       }
     };
   };
-  
+
   /**
    * Returns true if browser has required functionality, otherwise
    * logs error and returns false.
