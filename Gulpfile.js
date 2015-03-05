@@ -3,8 +3,6 @@ var fs = require('fs')
   , include = require('gulp-include')
   , rename = require('gulp-rename');
 
-var inject = require('gulp-inject');
-
 gulp.task("debug", function() {
   gulp.src('src/core.js')
     .pipe(include())
