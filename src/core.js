@@ -101,23 +101,23 @@
     };
   };
 
-  /*
-   var counter = function() {
-   var count = 0;
-
-   return function() {
-   return count < 4294967295 ? count++ : 0;
-   };
-   };
+  /**
+   * Requires libraries used by node.js version
    */
+  if (executionEnvironment() === EE_NODEJS) {
+    WebSocket = require("ws");
+    Promise = require("promise");
+  }
 
   /**
    * Returns true if browser has required functionality, otherwise
    * logs error and returns false.
    */
   if (typeof WebSocket === "undefined") {
-    console.error("This browser does not support WebSocket");
-    return;
+    if (executionEnvironment() === EE_BROWSER) {
+      console.error("This browser does not support WebSocket");
+      return;
+    }
   }
 
   /**
@@ -142,7 +142,9 @@
     }
   };
 
-//@@includes
+  //
+  //= include ['*', '!core.js']
+  //
 
   /**
    * The SPARKL object.

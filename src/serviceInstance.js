@@ -210,7 +210,10 @@ ServiceInstance.prototype.loadNodeJSJavascript = function () {
       };
 
       try {
-        require(module)
+        var requiredModule = require(module);
+        if (typeof requiredModule === 'function') {
+          new requiredModule();
+        }
         fulfil();
       } catch (error) {
         console.error(error);

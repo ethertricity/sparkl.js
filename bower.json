@@ -1,6 +1,6 @@
 {
   "name": "sparkl",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "main": "build/release/sparkl.js",
   "license": "",
   "repository": {
@@ -12,7 +12,6 @@
     "test",
     "src",
     "*.md",
-    "Gruntfile.js",
     "package.json"
   ]
 }
